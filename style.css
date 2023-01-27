@@ -7,3 +7,17 @@ body {
     height: 100vh;
     display:flex;
 }
+
+.picture-frame {
+    background-image: url('./images/halie-west-25xggax4bSA-unsplash.jpg');
+    background-clip: border-box;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+    width: 40vw;
+}
+
+.main-content {
+    width: 60vw;
+}
