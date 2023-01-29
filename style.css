@@ -24,7 +24,7 @@ a {
     color: white;
 }
 
-@media(max-width:960px) {
+@media(max-width:840px) {
     body {
         flex-direction: column;
     }
@@ -33,6 +33,7 @@ a {
     }
     form {
         flex-direction: column;
+        padding-right: 0;
     }
     .form-group {
         width: 500px;
