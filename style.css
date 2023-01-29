@@ -1,5 +1,11 @@
+@font-face {
+    font-family: Norse;
+    src: url('./fonts/Norse-Bold.otf');
+}
+
 * {
     border: 1px solid black;
+    font-family: sans-serif;
 }
 
 body {
@@ -8,14 +14,28 @@ body {
     display:flex;
 }
 
+a {
+    color: white;
+}
+
 .picture-frame {
-    background-image: url('./images/halie-west-25xggax4bSA-unsplash.jpg');
-    background-clip: border-box;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: auto;
-    
+    background-image: url('./images/boudhayan-bardhan-60tataLkJ0U-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
     width: 40vw;
+}
+
+.picture-title {
+    font-family: Norse;
+    position: relative;
+    top: 20%;
+}
+
+.picture-footer {
+    position: relative;
+    bottom: -10%;
+    color: white;
+    text-align: center;
 }
 
 .main-content {
