@@ -3,41 +3,161 @@
     src: url('./fonts/Norse-Bold.otf');
 }
 
+:root {
+    --frame-width: 37vw;
+}
+
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-family: sans-serif;
+    margin: 0;
 }
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display:flex;
+    box-sizing: border-box;
 }
 
 a {
     color: white;
 }
 
+@media(max-width:960px) {
+    body {
+        flex-direction: column;
+    }
+    :root {
+        --frame-width: 100vw;
+    }
+    form {
+        flex-direction: column;
+    }
+    .form-group {
+        width: 500px;
+    }
+}
+
 .picture-frame {
+    flex: 3;
     background-image: url('./images/boudhayan-bardhan-60tataLkJ0U-unsplash.jpg');
     background-position: center;
     background-size: cover;
-    width: 40vw;
+    width: var(--frame-width);
 }
 
 .picture-title {
+    background-color: rgba(0,0,0, 0.3);
+    padding: 12px;
     font-family: Norse;
     position: relative;
-    top: 20%;
+    top: calc(30% - (120px + 10px + 10px)/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-title > img {
+    height: 120px;
+}
+
+.picture-title > p {
+    font-family: Norse;
+    font-size: 6rem;
+    margin: 0 10px;
+    color: white;
 }
 
 .picture-footer {
+    background-color: rgba(0,0,0, 0.3);
+    height: 25px;
+    width: 100%;
     position: relative;
-    bottom: -10%;
+    top: calc(100% - (120px + 10px + 10px) - 25px - 1rem);
+    font-size: 0.8rem;
+    padding-top: calc(25px - 1rem);
     color: white;
-    text-align: center;
+    text-align: center;;
+}
+
+.main-container {
+    flex: 6;
+}
+
+.main-container p {
+    padding-left: 5%;
+    max-width: 720px;
 }
 
 .main-content {
-    width: 60vw;
+    margin-top: 10%;
+    /* max-width: 720px; */
+}
+
+.hero {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 3% 0;
+    padding-right: 10%;
+}
+
+.hero > p:last-child {
+    margin: 3% 0;
+}
+
+.form-card {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.6);
+}
+
+form {
+    /* border: 1px solid pink; */
+    margin-top: 10px;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15%;
+    max-width: 720px;
+}
+
+.form-group {
+    width: 40%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: bold;
+    gap: 10px;
+}
+
+#create-account {
+    margin: 3% 5%;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #15803d;
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.6);
+    color: white;
+    font-weight: bold;
+}
+
+#create-account:hover {
+    background-color: #166534;
+}
+
+#create-account:active {
+    background-color: #065f46;
+    transform: translate(1px, 2px);
+    box-shadow: 0px 0px 4px 0 rgba(0,0,0,0.6);
+}
+
+.log-in {
+    margin-bottom: 50px;
+}
+
+.log-in a {
+    color: #065f46;
 }
