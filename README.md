@@ -10,4 +10,4 @@ A simple sign-up form built using HTML and CSS. This project is part of [The Odi
 
 ## Live Demo
 
-Check out the live demo [here](https://bagas-na.github.io/sign-up-form/).
+Check out the live demo [here](https://bagas-na.github.io/odin-sign-up-form/).
